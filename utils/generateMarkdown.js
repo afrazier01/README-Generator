@@ -1,20 +1,37 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseSection(license) {
+  let licenseIMG;
+  let licenseLink;
+  
+  switch (license) {
+    case 'MIT':
+      licenseIMG = 'https://img.shields.io/badge/License-MIT-yellow.svg';
+      licenseLink = 'https://opensource.org/licenses/MIT';
+      break;
+    case 'APACHE 2.0':
+      licenseIMG = 'https://img.shields.io/badge/License-Apache_2.0-blue.svg';
+      licenseLink = 'https://opensource.org/licenses/Apache-2.0';
+      break;
+    case 'GPL 3.0':
+      licenseIMG = 'https://img.shields.io/badge/License-GPLv3-blue.svg';
+      licenseLink = 'https://www.gnu.org/licenses/gpl-3.0';
+      break;
+    case 'BSD 3':
+      licenseIMG = 'https://img.shields.io/badge/License-BSD_3--Clause-blue.svg';
+      licenseLink = 'https://opensource.org/licenses/BSD-3-Clause';
+      break;
+    default:
+      licenseIMG = '';
+      licenseLink = '';
+  }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+  return {licenseIMG,licenseLink}
+};
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(github, email, title, description, license, dependencies, test, information, contribution) {
+function generateMarkdown(github, email, title, description, license, dependencies, test, information, contribution, licenseIMG, licenseLink) {
   return `# ${title}
   
-  ${license}
+  [![License: ${license}](${licenseIMG})](${licenseLink})
 
   ## Description
   ${description}
@@ -29,23 +46,25 @@ function generateMarkdown(github, email, title, description, license, dependenci
 
   ## Installation
   To install necessary dependencies, run the following command:
-  '''
   ${dependencies}
-  '''
 
   ## Usage
-  Command to run test: ${test}
   ${information}
 
   ## License
+  This project is licensed under the ${license} license.
 
   ## Contributing
+  ${contribution}
 
   ## Tests
+  To run tests , run the following command:
+  >${test}
 
+  
   ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at [${email}](mailto:${email})
+  If you have any questions about the repo, open an issue or contact me directly at [${email}](mailto:${email}). You can find more of my work at [${github}](https://github.com/${github})
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown, renderLicenseSection};

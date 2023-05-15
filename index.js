@@ -2,13 +2,17 @@
 const {questions} = require('./questions')
 const inquirer = require('inquirer')
 const fs = require('fs')
-const generateMarkdown = require('./utils/generateMarkdown')
+const {generateMarkdown, renderLicenseSection} = require('./utils/generateMarkdown')
+
 
 // TODO: Create an array of questions for user input
 function askQuestions() {
     inquirer.prompt(questions).then((data) => {
         const {github, email, title, description, license, dependencies, test, information, contribution} = data
         
+        //generate license
+        const {licenseIMG, licenseLink} = renderLicenseSection(license)
+
         //generate README
         const README = generateMarkdown(
             github, 
@@ -19,10 +23,12 @@ function askQuestions() {
             dependencies, 
             test, 
             information, 
-            contribution
+            contribution,
+            licenseIMG,
+            licenseLink
         );
         
-        fs.writeFile('README.md', README, (err) => {
+        fs.writeFile('test README.md', README, (err) => {
             if (err) {
                 console.error(err);
                 return;
