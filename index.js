@@ -28,7 +28,7 @@ function askQuestions() {
             licenseLink
         );
         
-        fs.writeFile('test README.md', README, (err) => {
+        fs.writeFile('README.md', README, (err) => {
             if (err) {
                 console.error(err);
                 return;

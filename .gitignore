@@ -2,3 +2,4 @@ node_modules
 INSTRUCTIONS.md 
 .vscode
 test README.md 
+.gitignore

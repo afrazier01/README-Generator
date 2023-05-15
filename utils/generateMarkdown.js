@@ -45,8 +45,8 @@ function generateMarkdown(github, email, title, description, license, dependenci
   6. [Questions](#questions)
 
   ## Installation
-  To install necessary dependencies, run the following command:
-  ${dependencies}
+  To install the necessary dependencies, run the following command:
+  >${dependencies}
 
   ## Usage
   ${information}
@@ -58,7 +58,7 @@ function generateMarkdown(github, email, title, description, license, dependenci
   ${contribution}
 
   ## Tests
-  To run tests , run the following command:
+  To run tests, run the following command:
   >${test}
 
   
