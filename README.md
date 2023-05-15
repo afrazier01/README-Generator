@@ -3,7 +3,7 @@
   MIT
 
   ## Description
-  ...
+  This is the demo
 
   ## Table of Contents
   1. [Installation](#installation)
@@ -21,7 +21,7 @@
 
   ## Usage
   Command to run test: npm test
-  ...
+  demo
 
   ## License
 
