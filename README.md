@@ -3,7 +3,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  The challenge for this project was to build a program that produces a high-quality README for a project, so the developer can spend more time coding and less to creating documentation.
+  The challenge for this project was to build a program that produces a high-quality README for a project, so the developer can spend more time coding and less writing documentation.
 
   >Note: This README was generated with this application, click [here](https://drive.google.com/file/d/1exDtW6eNF07QemLuSVH1yKz52Ule2OpB/view) to see how.
 
