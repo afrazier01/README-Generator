@@ -3,7 +3,9 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  Demo description
+  The challenge for this project was to build a program that produces a high-quality README for a project, so the developer can spend more time coding and less to creating documentation.
+
+  >Note: This README was generated with this application, click [here](https://drive.google.com/file/d/1exDtW6eNF07QemLuSVH1yKz52Ule2OpB/view) to see how.
 
   ## Table of Contents
   1. [Installation](#installation)
@@ -18,13 +20,16 @@
   >npm i
 
   ## Usage
-  run node index.js to start application
+  Get started with this command:
+  >node index.js
+  
+  Then enter your answer to the prompts to have your README generated.
 
   ## License
-  This project is licensed under the MIT license.
+  This project is licensed under the MIT license. Please click the badge above to see more details.
 
   ## Contributing
-  ...
+  If you'd like to contribute, you can reach me directly at the email listed below.
 
   ## Tests
   To run tests, run the following command:
